@@ -1,0 +1,49 @@
+.article {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  &:hover {
+    background-color: $color-hover;
+    transform: scale(1.05);
+  }
+  &__img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  &__meta {
+    display: flex;
+    font-size: 0.75rem;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    color: rgba($color-font, 0.7);
+    text-transform: uppercase;
+  }
+  &__heading {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    @media (max-width: 768px) {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: calc(3 * 1.5em);
+    }
+    
+  }
+
+  @media screen and (min-width: 1250px) {
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &__img {
+      width: 100%;
+      min-height: 179px;
+    }
+  }
+}

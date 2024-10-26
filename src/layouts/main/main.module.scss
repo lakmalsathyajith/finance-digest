@@ -1,0 +1,28 @@
+.main {
+  color: $color-font;
+  &__heading {
+    height: 44px;
+    margin-left: 1rem;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 0.5rem;
+  }
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+  }
+  @media screen and (min-width: 1440px) {
+    &__heading {
+      height: 112px;
+      align-items: center;
+      margin: 0 3rem;
+    }
+
+    &__title {
+      font-size: 3rem;
+      font-weight: 500;
+      line-height: 2rem;
+    }
+  }
+}

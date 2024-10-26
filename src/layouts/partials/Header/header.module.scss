@@ -1,0 +1,14 @@
+.header {
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $color-border;
+  @media screen and (min-width: 1250px) {
+    padding: 0.5rem;
+    &__logo {
+      width: 200px;
+      height: 48.2px;
+    }
+  }
+}
