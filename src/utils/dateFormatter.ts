@@ -1,4 +1,4 @@
-const formatUnixToReadableDate = (unixTimestamp) => {
+const formatUnixToReadableDate = (unixTimestamp: EpochTimeStamp) => {
   const date = new Date(unixTimestamp * 1000);
 
   const day = date.getDate();

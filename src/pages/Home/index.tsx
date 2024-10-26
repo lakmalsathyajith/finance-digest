@@ -3,16 +3,16 @@ import MainLayout from "../../layouts/main";
 import { useNews } from "../../hooks/useNewsData";
 import NewsErrorBoundary from "../../ErrorBoundries/NewsErrorBoundry";
 
-const NewsListData = () => {
-  const { data: { data } = [], error } = useNews("general");
+const NewsListData: React.FunctionComponent = () => {
+  const { data, error } = useNews("general");
 
   if (error) {
     throw new Error("No news items available!"); // This will be caught in ErrorBoundary
   }
-  return <>{data && <NewsList news={data} />}</>;
+  return <>{data && <NewsList news={data.data} />}</>;
 };
 
-function Home() {
+const Home: React.FunctionComponent = () => {
   return (
     <MainLayout>
       <NewsErrorBoundary>
@@ -20,6 +20,6 @@ function Home() {
       </NewsErrorBoundary>
     </MainLayout>
   );
-}
+};
 
 export default Home;

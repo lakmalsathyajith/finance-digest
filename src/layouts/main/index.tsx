@@ -1,7 +1,14 @@
+import React from "react";
 import Header from "../partials/Header";
 import styles from "./main.module.scss";
 
-const MainLayout = ({ children }) => {
+interface MainLayoutPropTypes {
+  children: React.ReactNode;
+}
+
+const MainLayout: React.FunctionComponent<MainLayoutPropTypes> = ({
+  children,
+}) => {
   return (
     <>
       <Header />

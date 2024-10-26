@@ -1,8 +1,14 @@
 import styles from "./newsItem.module.scss";
 import formatUnixToReadableDate from "../../utils/dateFormatter";
+import { NewsItemData } from "../../utils/types";
+import React from "react";
 
-const NewsItem = ({ data }) => {
-  const handleClick = (url) => {
+interface NewsItemPropTypes {
+  data: NewsItemData;
+}
+
+const NewsItem: React.FunctionComponent<NewsItemPropTypes> = ({ data }) => {
+  const handleClick = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
