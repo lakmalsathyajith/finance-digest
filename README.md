@@ -33,7 +33,7 @@ Hooks
 
 This is a mobile first responsive web application
 
-The data fetching logic is encapsulated in to a `custom hook`
+The data fetching logic is encapsulated in to a `custom hook` using `react-query`
 
 `saas modules` are used to manage the styling together with the componenent.
 
