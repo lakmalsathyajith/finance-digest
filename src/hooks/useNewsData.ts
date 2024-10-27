@@ -5,7 +5,9 @@ import { NewsItemData } from "../utils/types";
 interface NewsResponse {
   data: NewsItemData[];
 }
-
+/**
+ * Custom hook to fetch news data
+ */
 export const useNews = (category: string) => {
   return useQuery<NewsResponse, Error>({
     queryKey: ["news", category],
